@@ -15,18 +15,6 @@ function burgerInit(e){
     }
 }
 
-// modal-window
-const modal = document.querySelector('.modal');
-const modalButtons = document.querySelectorAll('.card-button'); 
-
-modalButtons.forEach(button => {
-    button.addEventListener('click', openModal);
-});
-
-function openModal(e) {
-    e.preventDefault();
-    document.body.classList.toggle('body--opened-modal');
-}
 
 
 // header-slider
@@ -38,9 +26,12 @@ const paginationContainer = document.querySelector('.pagination');
 
 let currentIndex = 0;
 const totalSlides = headerSlide.length;
+const autoplayIntervalTime = 5000; 
+
+let autoplayInterval;
 
 function updateSliderPosition() {
-  headerSlides.style.transform = `translateX(-${currentIndex * 100}%)`;
+  headerSlides.style.transform = `translateX(-${currentIndex * 100}%) `;
   updatePagination();
 }
 
@@ -58,6 +49,7 @@ function createPaginationDots() {
     dot.addEventListener('click', () => {
       currentIndex = i; 
       updateSliderPosition();
+      resetAutoplay(); 
     });
     paginationContainer.appendChild(dot);
   }
@@ -73,6 +65,7 @@ nextHeaderBtn.addEventListener('click', () => {
     currentIndex = 0; 
   }
   updateSliderPosition();
+  resetAutoplay(); 
 });
 
 prevHeaderBtn.addEventListener('click', () => {
@@ -82,7 +75,37 @@ prevHeaderBtn.addEventListener('click', () => {
     currentIndex = totalSlides - 1; 
   }
   updateSliderPosition();
+  resetAutoplay(); 
 });
+
+function startAutoplay() {
+  autoplayInterval = setInterval(() => {
+    currentIndex = (currentIndex + 1) % totalSlides; 
+    updateSliderPosition();
+  }, autoplayIntervalTime);
+}
+
+function resetAutoplay() {
+  clearInterval(autoplayInterval);
+  startAutoplay(); 
+}
+
+startAutoplay();
+
+
+
+// modal-window
+const modal = document.querySelector('.modal');
+const modalButtons = document.querySelectorAll('.card-button'); 
+
+modalButtons.forEach(button => {
+     button.addEventListener('click', openModal);
+});
+
+ function openModal(e) {
+     e.preventDefault();
+    document.body.classList.toggle('body--opened-modal');
+}
 
 
 // gallery-slider

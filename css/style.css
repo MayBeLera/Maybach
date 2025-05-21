@@ -202,6 +202,8 @@ body {
 .slide-bg {
 }
 .slide-info {
+  position: relative;
+  z-index: 111111;
 }
 .slide-title {
   max-width: 1000px;
@@ -381,11 +383,10 @@ body {
   overflow: visible;
 }
 .gallery__slides {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-self: center;
+    gap: 40px;
 }
 .gallery__slide {
 }
@@ -552,6 +553,29 @@ body {
 
 /* ------------------------------------------------------------------------- */
 @media (max-width: 1700px) {
+  /*  */
+  .advantages__list {
+    color: var(--text-color);
+    display: grid
+;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    gap: 55px 35px;
+}
+.advantages__item {
+    display: flex;
+    justify-content: space-around;
+    /* flex-direction: column; */
+    /* text-align: center; */
+    gap: 10px;
+    align-items: center;
+    max-width: 590px;
+}
+.advantages__item:first-child{
+  max-width: 690px;
+}
+
   /* footer */
   .footer-column:last-child {
     max-width: 940px;
@@ -636,6 +660,7 @@ body {
 @media (max-width: 1300px) {
 }
 @media (max-width: 1000px) {
+  /* header */
   .logo {
     max-width: 63px;
   }
@@ -644,6 +669,23 @@ body {
   }
   .nav__number svg {
     max-width: 30px;
+  }
+  /* header-slider */
+  .slide {
+    padding: 240px 0 400px;
+    background-position: 18% 80%;
+  }
+   /* advantages */
+  .advantages__list {
+    grid-template-columns: none;
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .advantages__item {
+    flex-direction: column;
+    text-align: center;
+  }
+  .advantages__item img {
+    margin-bottom: 10px;
   }
 }
 
@@ -680,13 +722,7 @@ body {
     inset: 0;
     z-index: 10;
     height: 100%;
-    background: linear-gradient(
-        180deg,
-        #e7af3e26 0%,
-        #75581f26 64%,
-        #00000026 100%
-      ),
-      url("../img/adapt-bg.jpg") 0% 0% / 100% no-repeat;
+    background: url("../img/adapt-bg.jpg") 0% 0% / 100% no-repeat;
     box-shadow: 4px 22px 40px rgba(30, 35, 66, 0.58);
     /* font */
     font-size: 24px;
@@ -718,18 +754,7 @@ body {
     display: flex;
   }
 
-  /* advantages */
-  .advantages__list {
-    grid-template-columns: none;
-    grid-template-rows: repeat(4, 1fr);
-  }
-  .advantages__item {
-    flex-direction: column;
-    text-align: center;
-  }
-  .advantages__item img {
-    margin-bottom: 10px;
-  }
+ 
 
   /* gallery */
   .gallery__slider {
@@ -829,6 +854,10 @@ body {
   }
 }
 @media (max-width: 800px) {
+  .slide {
+    padding: 240px 0 300px;
+    background-position: 18% 80%;
+  }
   .gallery__controls .gallery__arrows-prev {
     left: -1%;
     bottom: 180px;
