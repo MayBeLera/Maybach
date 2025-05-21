@@ -18,99 +18,92 @@ function burgerInit(e){
 
 
 // header-slider
-const slides = document.querySelector('.slides');
-const slide = document.querySelectorAll('.slide');
-const prevBtn = document.getElementById('banner-prev');
-const nextBtn = document.getElementById('banner-next');
+const headerSlides = document.querySelector('.slides');
+const headerSlide = document.querySelectorAll('.slide');
+const prevHeaderBtn = document.getElementById('banner-prev');
+const nextHeaderBtn = document.getElementById('banner-next');
 const paginationContainer = document.querySelector('.pagination');
 
 let currentIndex = 0;
-const totalSlides = slide.length;
+const totalSlides = headerSlide.length;
 
-// Функция для обновления позиции слайдера
 function updateSliderPosition() {
-  slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+  headerSlides.style.transform = `translateX(-${currentIndex * 100}%)`;
   updatePagination();
 }
 
-// Функция для обновления состояния пагинации
 function updatePagination() {
-  // Удаляем класс active у всех точек
   const dots = document.querySelectorAll('.pagination-dot');
   dots.forEach(dot => dot.classList.remove('active'));
   
-  // Добавляем класс active к текущей точке
   dots[currentIndex].classList.add('active');
 }
 
-// Создание точек пагинации
 function createPaginationDots() {
   for (let i = 0; i < totalSlides; i++) {
     const dot = document.createElement('div');
     dot.classList.add('pagination-dot');
     dot.addEventListener('click', () => {
-      currentIndex = i; // Устанавливаем текущий индекс на выбранный слайд
+      currentIndex = i; 
       updateSliderPosition();
     });
     paginationContainer.appendChild(dot);
   }
 }
 
-// Инициализация пагинации
 createPaginationDots();
-updatePagination(); // Устанавливаем активную точку при загрузке
+updatePagination(); 
 
-nextBtn.addEventListener('click', () => {
+nextHeaderBtn.addEventListener('click', () => {
   if (currentIndex < totalSlides - 1) {
     currentIndex++;
   } else {
-    currentIndex = 0; // Возврат к первому слайду
+    currentIndex = 0; 
   }
   updateSliderPosition();
 });
 
-prevBtn.addEventListener('click', () => {
+prevHeaderBtn.addEventListener('click', () => {
   if (currentIndex > 0) {
     currentIndex--;
   } else {
-    currentIndex = totalSlides - 1; // Переход на последний слайд
+    currentIndex = totalSlides - 1; 
   }
   updateSliderPosition();
 });
 
 
+// gallery-slider
 
+const gallerySlides = document.querySelector('.gallery__slides');
+const gallerySlide = document.querySelectorAll('.gallery__slide');
+const galleryPrevBtn = document.getElementById('gallery__arrows-prev');
+const galleryNextBtn = document.getElementById('gallery__arrows-next');
 
-// const slides = document.querySelector('.slides');
-// const slide = document.querySelectorAll('.slide');
-// const prevBtn = document.getElementById('banner-prev');
-// const nextBtn = document.getElementById('banner-next');
+let galleryCurrentIndex = 0;
+const galleryTotalSlides = gallerySlide.length;
 
-// let currentIndex = 0;
-// const totalSlides = slide.length;
+ function updateGallerySliderPosition() {
+   gallerySlides.style.transform = `translateX(-${galleryCurrentIndex * 100}%)`;
+}
 
-// function updateSliderPosition() {
-//   slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-// }
+galleryNextBtn.addEventListener('click', () => {
+   if (galleryCurrentIndex < galleryTotalSlides - 1) {
+     galleryCurrentIndex++;
+   } else {
+      galleryCurrentIndex = 0; // Возврат к первому слайду
+   }
+   updateGallerySliderPosition();
+ });
 
-// nextBtn.addEventListener('click', () => {
-//   if (currentIndex < totalSlides - 1) {
-//     currentIndex++;
-//   } else {
-//     currentIndex = 0; // Возврат к первому слайду
-//   }
-//   updateSliderPosition();
-// });
-
-// prevBtn.addEventListener('click', () => {
-//   if (currentIndex > 0) {
-//     currentIndex--;
-//   } else {
-//     currentIndex = totalSlides - 1; // Переход на последний слайд
-//   }
-//   updateSliderPosition();
-// });
-
+ galleryPrevBtn.addEventListener('click', () => {
+   if (galleryCurrentIndex > 0) {
+     galleryCurrentIndex--;
+   } else {
+     galleryCurrentIndex = galleryTotalSlides - 1; // Переход на последний слайд
+   }
+   updateGallerySliderPosition();
+ });
 
 
 
