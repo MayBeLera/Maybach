@@ -17,7 +17,7 @@ function burgerInit(e){
 
 
 
-
+// header-slider
 const slides = document.querySelector('.slides');
 const slide = document.querySelectorAll('.slide');
 const prevBtn = document.getElementById('banner-prev');
