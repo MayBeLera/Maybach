@@ -15,6 +15,18 @@ function burgerInit(e){
     }
 }
 
+// modal-window
+const modal = document.querySelector('.modal');
+const modalButtons = document.querySelectorAll('.card-button'); 
+
+modalButtons.forEach(button => {
+    button.addEventListener('click', openModal);
+});
+
+function openModal(e) {
+    e.preventDefault();
+    document.body.classList.toggle('body--opened-modal');
+}
 
 
 // header-slider
@@ -74,7 +86,6 @@ prevHeaderBtn.addEventListener('click', () => {
 
 
 // gallery-slider
-
 const gallerySlides = document.querySelector('.gallery__slides');
 const gallerySlide = document.querySelectorAll('.gallery__slide');
 const galleryPrevBtn = document.getElementById('gallery__arrows-prev');
@@ -91,7 +102,7 @@ galleryNextBtn.addEventListener('click', () => {
    if (galleryCurrentIndex < galleryTotalSlides - 1) {
      galleryCurrentIndex++;
    } else {
-      galleryCurrentIndex = 0; // Возврат к первому слайду
+      galleryCurrentIndex = 0;
    }
    updateGallerySliderPosition();
  });
@@ -100,7 +111,7 @@ galleryNextBtn.addEventListener('click', () => {
    if (galleryCurrentIndex > 0) {
      galleryCurrentIndex--;
    } else {
-     galleryCurrentIndex = galleryTotalSlides - 1; // Переход на последний слайд
+     galleryCurrentIndex = galleryTotalSlides - 1; 
    }
    updateGallerySliderPosition();
  });
@@ -109,38 +120,14 @@ galleryNextBtn.addEventListener('click', () => {
 
 
 
+// modal.addEventListener('click', closeModal)
 
+// function closeModal (e) {
+//   e.preventDefault()
+//   const target = e.target;
 
-
-
-
-
-// const slides = document.querySelector('.gallery__slides');
-// const slide = document.querySelectorAll('.gallery__slide');
-// const prevBtn = document.querySelector('.gallery__arrows-prev');
-// const nextBtn = document.querySelector('.gallery__arrows-next');
-
-// let currentIndex = 0;
-// const totalSlides = slide.length;
-
-// function updateSliderPosition() {
-//   slides.style.transform = `translateX(-${currentIndex * 105}%)`;
+//   if(target.closest('.modal__cancel') || target.classList.contains('modal')){
+//     document.body.classList.remove('body--opened-modal')
+//   }
 // }
 
-// nextBtn.addEventListener('click', () => {
-//   if (currentIndex < totalSlides - 1) {
-//     currentIndex++;
-//   } else {
-//     currentIndex = 0; // Возврат к первому слайду
-//   }
-//   updateSliderPosition();
-// });
-
-// prevBtn.addEventListener('click', () => {
-//   if (currentIndex > 0) {
-//     currentIndex--;
-//   } else {
-//     currentIndex = totalSlides - 1; // Переход на последний слайд
-//   }
-//   updateSliderPosition();
-// });
