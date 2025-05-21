@@ -553,11 +553,17 @@ body {
 
 /* ------------------------------------------------------------------------- */
 @media (max-width: 1700px) {
+  .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 240px 0 400px;
+    z-index: -1;
+    background: linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url(../img/header.jpg) 0% 70% / cover no-repeat;
+}
   /*  */
   .advantages__list {
     color: var(--text-color);
-    display: grid
-;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     justify-items: center;
