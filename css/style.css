@@ -231,6 +231,9 @@ body {
   font-size: 26px;
   white-space: nowrap;
 }
+.nav-container{
+  position: relative;
+}
 .navigation {
   z-index: 1;
   max-width: 70px;
