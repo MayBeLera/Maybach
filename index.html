@@ -70,7 +70,7 @@
                             <div class="container">
                                 <h1 class="slide-title">АРЕНДА <span>МАЙБАХ</span> НА СВАДЬБУ И ДРУГИЕ МЕРОПРИЯТИЯ</h1>
                                 <p class="slide-text">Лучше на это место добавить слоган, не больше длины строки</p>
-                                <a class="card-button button slide-btn" href="#">АРЕНДОВАТЬ АВТО</a>
+                                <a class="button slide-btn open-modal" href="#">АРЕНДОВАТЬ АВТО</a>
                             </div>
                         </div>
                     </div>
@@ -79,7 +79,7 @@
                             <div class="container">
                                 <h1 class="slide-title">АРЕНДА <span>МАЙБАХ</span> НА СВАДЬБУ И ДРУГИЕ МЕРОПРИЯТИЯ</h1>
                                 <p class="slide-text">Лучше на это место добавить слоган, не больше длины строки</p>
-                                <a class="card-button button slide-btn" href="#">АРЕНДОВАТЬ АВТО</a>
+                                <a class="button slide-btn open-modal" href="#">АРЕНДОВАТЬ АВТО</a>
                             </div>
                         </div>
                     </div>
@@ -88,7 +88,7 @@
                             <div class="container">
                                 <h1 class="slide-title">АРЕНДА <span>МАЙБАХ</span> НА СВАДЬБУ И ДРУГИЕ МЕРОПРИЯТИЯ</h1>
                                 <p class="slide-text">Лучше на это место добавить слоган, не больше длины строки</p>
-                                <a class="card-button button slide-btn" href="#">АРЕНДОВАТЬ АВТО</a>
+                                <a class="button slide-btn open-modal" href="#">АРЕНДОВАТЬ АВТО</a>
                             </div>
                         </div>
                     </div>
@@ -159,19 +159,19 @@
                             <img class="card-img" src="img/autopark.jpg" alt="Изображение авто">
                             <h4 class="card-title">АРЕНДА maybach</h4>
                             <p class="card-text">Любая цена, к примеру 3000 руб. / час</p>
-                            <a class="button card-button" href="#">АРЕНДОВАТЬ АВТО</a>
+                            <a class="button card-button open-modal" href="#">АРЕНДОВАТЬ АВТО</a>
                         </div>
                         <div class="card">
                             <img class="card-img" src="img/autopark.jpg" alt="Изображение авто">
                             <h4 class="card-title">АРЕНДА maybach</h4>
                             <p class="card-text">Любая цена, к примеру 3000 руб. / час</p>
-                            <a class="button card-button" href="#">АРЕНДОВАТЬ АВТО</a>
+                            <a class="button card-button open-modal" href="#">АРЕНДОВАТЬ АВТО</a>
                         </div>
                         <div class="card">
                             <img class="card-img" src="img/autopark.jpg" alt="Изображение авто">
                             <h4 class="card-title">АРЕНДА maybach</h4>
                             <p class="card-text">Любая цена, к примеру 3000 руб. / час</p>
-                            <a class="button card-button" href="#">АРЕНДОВАТЬ АВТО</a>
+                            <a class="button card-button open-modal" href="#">АРЕНДОВАТЬ АВТО</a>
                         </div>
                     </div>
                 </div>
@@ -183,7 +183,9 @@
                     <h3 class="title">ПОЧЕМУ ЛЮДИ, ОТДАЮТ ПРЕДПОЧТЕНИЕ НАМ?</h3>
                     <ul class="advantages__list">
                         <li class="advantages__item">
-                            <img src="img/icon/car.svg" alt="Иконка">
+                            <div class="advantages__item-img">
+                                <img src="img/icon/car.svg" alt="Иконка">
+                            </div>
                             <div class="advantage">
                                 <p class="advantage-title">ИЗЫСКАННЫЙ КОМФОРТ</p>
                                 <p class="advantage-text">Майбах предлагает великолепные условия для поездки.
@@ -193,7 +195,9 @@
                             </div>
                         </li>
                         <li class="advantages__item">
-                            <img src="img/icon/design.svg" alt="Иконка">
+                            <div class="advantages__item-img">
+                                <img src="img/icon/design.svg" alt="Иконка">
+                            </div>
                             <div class="advantage">
                                 <p class="advantage-title">СТИЛЬНЫЙ ДИЗАЙН</p>
                                 <p class="advantage-text">Излегантные линии и изящные детали автомобиля
@@ -203,7 +207,9 @@
                             </div>
                         </li>
                         <li class="advantages__item">
-                            <img src="img/icon/skill.svg" alt="Иконка">
+                            <div class="advantages__item-img">
+                                <img src="img/icon/skill.svg" alt="Иконка">
+                            </div>
                             <div class="advantage">
                                 <p class="advantage-title">ВЫСОКАЯ КВАЛИФИКАЦИЯ ВОДИТЕЛЕЙ</p>
                                 <p class="advantage-text">Наши опытные водители не только обеспечат вам
@@ -212,7 +218,9 @@
                             </div>
                         </li>
                         <li class="advantages__item">
-                            <img src="img/icon/child.svg" alt="Иконка">
+                            <div class="advantages__item-img">
+                                <img src="img/icon/child.svg" alt="Иконка">
+                            </div>
                             <div class="advantage">
                                 <p class="advantage-title">ПОЕЗДКИ С ДЕТЬМИ ЛЮБОГО ВОЗРАСТА</p>
                                 <p class="advantage-text">Для каждого автомобиля предусмотрено все оборудование
@@ -344,18 +352,20 @@
 
 
     <div class="modal">
-        <div class="modal-window">
-            <div class="modal__cansel">
-                <a href="#"></a>
+        <div class="modal__window">
+            <div class="modal__cancel">
+                <a href="#">
+                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.69099 6.5001L12.7529 1.4379C13.0824 1.10862 13.0824 0.576231 12.7529 0.246956C12.4237 -0.0823187 11.8913 -0.0823187 11.562 0.246956L6.49992 5.30915L1.43798 0.246956C1.10856 -0.0823187 0.576335 -0.0823187 0.247067 0.246956C-0.0823556 0.576231 -0.0823556 1.10862 0.247067 1.4379L5.30901 6.5001L0.247067 11.5623C-0.0823556 11.8916 -0.0823556 12.424 0.247067 12.7532C0.411161 12.9175 0.62692 13 0.842525 13C1.05813 13 1.27374 12.9175 1.43798 12.7532L6.49992 7.69104L11.562 12.7532C11.7263 12.9175 11.9419 13 12.1575 13C12.3731 13 12.5887 12.9175 12.7529 12.7532C13.0824 12.424 13.0824 11.8916 12.7529 11.5623L7.69099 6.5001Z" fill="#7E839A"/>
+                    </svg>
+                </a>
             </div>
-            <div class="modal__inner">
-                <h6 class="modal-title">ИЛИ ЗАПОЛНИТЕ ФОРМу, и мы сразу вам перезвоним:</h6>
-                <form class="modal-form">
-                    <input type="text" placeholder="Ваше имя" required>
-                    <input type="tel" placeholder="Ваш номер телефона" required>
-                    <button class="button modal-btn" type="submit">АРЕНДОВАТЬ АВТО</button>
-                </form>
-            </div>
+            <h6 class="modal-title">ИЛИ ЗАПОЛНИТЕ ФОРМу, и мы сразу вам перезвоним:</h6>
+            <form class="modal-form">
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="tel" placeholder="Ваш номер телефона" pattern="\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}" required>
+                <button class="button modal-btn" type="submit">АРЕНДОВАТЬ АВТО</button>
+            </form>
         </div>
     </div>
 

@@ -96,7 +96,7 @@ startAutoplay();
 
 // modal-window
 const modal = document.querySelector('.modal');
-const modalButtons = document.querySelectorAll('.card-button'); 
+const modalButtons = document.querySelectorAll('.open-modal'); 
 
 modalButtons.forEach(button => {
      button.addEventListener('click', openModal);
@@ -107,6 +107,16 @@ modalButtons.forEach(button => {
     document.body.classList.toggle('body--opened-modal');
 }
 
+modal.addEventListener('click', closeModal)
+
+  function closeModal (e) {
+   e.preventDefault()
+   const target = e.target;
+
+  if(target.closest('.modal__cancel') || target.classList.contains('modal')){
+     document.body.classList.remove('body--opened-modal')
+  }
+}
 
 // gallery-slider
 const gallerySlides = document.querySelector('.gallery__slides');
@@ -143,14 +153,5 @@ galleryNextBtn.addEventListener('click', () => {
 
 
 
-// modal.addEventListener('click', closeModal)
 
-// function closeModal (e) {
-//   e.preventDefault()
-//   const target = e.target;
-
-//   if(target.closest('.modal__cancel') || target.classList.contains('modal')){
-//     document.body.classList.remove('body--opened-modal')
-//   }
-// }
 
