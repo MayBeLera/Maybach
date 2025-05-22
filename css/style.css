@@ -99,6 +99,10 @@ body {
   color: #fafafa;
   font-size: 26px;
   font-weight: 300;
+  transition: all .3s;
+}
+.nav__link:hover{
+  color: var(--accent);
 }
 .nav__number {
   padding: 0 35px 0 90px;
