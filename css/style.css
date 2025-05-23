@@ -440,6 +440,7 @@ body {
 }
 .footer__number-text {
   margin-bottom: 5px;
+  white-space: nowrap;
 }
 .footer__number-phone {
   color: var(--accent);
@@ -448,6 +449,7 @@ body {
   margin-bottom: 25px;
 }
 .footer__social-text {
+  white-space: nowrap;
   font-weight: 300;
   margin-bottom: 9px;
 }
@@ -462,6 +464,7 @@ body {
     justify-content: start;
   }
 .footer__address {
+  white-space: nowrap;
   font-weight: 500;
   margin-bottom: 5px;
 }
@@ -762,7 +765,10 @@ body {
   .card {
         max-width: 450px;
     }
-
+/* services */
+    .services__item {
+        max-width: 350px;
+    }
   /* footer */
   .footer-column:last-child {
     max-width: 640px;
@@ -793,6 +799,11 @@ body {
     bottom: 0;
     transform: translate(-50%, 0);
   }
+  .footer__number-text,
+  .footer__address {
+    font-size: 24px;
+    white-space: nowrap;
+}
 }
 @media (max-width: 1200px) {
   /* services */
@@ -828,11 +839,11 @@ body {
 }
 @media (max-width: 1100px) {
   .container {
-    padding: 0 15px;
+    padding: 0 35px;
   }
   /* header */
   .header__nav {
-    padding: 17px 10px 16px 15px;
+    padding: 15px 10px 16px 15px;
   }
   .nav__list {
     gap: 20px 20px;
@@ -840,6 +851,9 @@ body {
   .nav__number svg {
     width: 25px;
   }
+  .nav__number {
+        font-size: 18px;
+    }
   /* header-slider */
   .navigation {
     bottom: 2%;
@@ -854,6 +868,9 @@ body {
   .nav__number {
     padding: 0 0 0 25px;
   }
+      .nav__link {
+        font-size: 19px;
+    }
   .nav__number svg {
     max-width: 30px;
   }
@@ -1155,6 +1172,9 @@ body {
 }
 
 @media (max-width: 500px) {
+  .container {
+    padding: 0 15px;
+  }
   .title {
     font-size: 24px;
     margin-bottom: 35px;
@@ -1319,6 +1339,9 @@ body {
     font-size: 13px;
     font-weight: 300;
   }
+  .footer__number-text {
+  white-space: wrap;
+}
 
   /* modal-window */
   .modal__inner {
