@@ -729,9 +729,6 @@ body {
 
   /* footer */
   .footer-columns {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     gap: 20px 50px;
   }
     .footer__form input {
@@ -1048,10 +1045,7 @@ body {
 
   /* footer */
   .footer-columns {
-    display: flex;
-    justify-content: space-between;
     text-align: center;
-    align-items: center;
     flex-direction: column;
   }
   .footer__form input {
