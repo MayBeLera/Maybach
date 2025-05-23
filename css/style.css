@@ -290,10 +290,10 @@ body {
 .services__item-desc {
   font-size: 24px;
   font-weight: 300;
-} 
+}
 
 /* --autopark-------------------------------------------------------------- */
- .autopark {
+.autopark {
   background: var(--add-general-bg);
 }
 .autopark__cards {
@@ -333,10 +333,10 @@ body {
 }
 .card-button {
   font-size: 26px;
-} 
+}
 
 /* --advantages------------------------------------------------------------ */
- .advantages {
+.advantages {
   background: var(--general-bg);
 }
 .advantages__list {
@@ -372,10 +372,10 @@ body {
   font-size: 26px;
   font-weight: 300;
   max-width: 739px;
-} 
+}
 
 /* --gallery--------------------------------------------------------------- */
- .gallery {
+.gallery {
   background: var(--add-general-bg);
 }
 .gallery__slider {
@@ -396,9 +396,9 @@ body {
 }
 .gallery__controls {
   display: none;
-} 
+}
 /* --footer---------------------------------------------------------------- */
- .footer {
+.footer {
   background: #101010;
 }
 .footer-columns {
@@ -444,9 +444,9 @@ body {
   width: 100%;
 }
 .footer__social .social__list {
-    display: flex;
-    justify-content: start;
-  }
+  display: flex;
+  justify-content: start;
+}
 .footer__address {
   white-space: nowrap;
   font-weight: 500;
@@ -488,7 +488,7 @@ body {
 }
 .adaptiv-address {
   display: none;
-} 
+}
 
 /* modal-window */
 .modal {
@@ -557,7 +557,7 @@ body {
 .body--opened-modal .modal {
   opacity: 1;
   visibility: visible;
-} 
+}
 
 /* ------------------------------------------------------------------------- */
 @media (max-width: 1700px) {
@@ -622,39 +622,38 @@ body {
 }
 @media (max-width: 1500px) {
   /* Общие */
-    .services,
-.autopark,
-.advantages,
-.gallery,
-.footer {
-  padding: 60px 0 40px;
-}
+  .services,
+  .autopark,
+  .advantages,
+  .gallery,
+  .footer {
+    padding: 60px 0 40px;
+  }
   /* ---services--- */
   .services__item {
     max-width: 400px;
   }
   .services__item-title,
-  .services__item-desc, 
+  .services__item-desc,
   .card-title,
   .advantage-title,
   .advantage-text {
     font-size: 20px;
   }
   .card {
-  padding: 20px 35px 90px;
-}
-  .card-text{
+    padding: 20px 35px 90px;
+  }
+  .card-text {
     font-size: 17px;
     margin-bottom: 35px;
   }
   .card-button {
-  font-size: 20px;
-} 
-/* footer */
+    font-size: 20px;
+  }
+  /* footer */
   .footer__form input {
     max-width: 385px;
   }
-  
 }
 @media (max-width: 1400px) {
   .title {
@@ -663,17 +662,17 @@ body {
   }
 
   /* ---header-slider--- */
-  .slide-title{
+  .slide-title {
     max-width: 750px;
     margin-bottom: 0;
   }
-  .slide-text{
+  .slide-text {
     font-size: 20px;
   }
-    /* ---services--- */
-    .services__list {
-        gap: 40px 20px;
-    }
+  /* ---services--- */
+  .services__list {
+    gap: 40px 20px;
+  }
   .services__item {
     max-width: 370px;
   }
@@ -682,10 +681,10 @@ body {
     font-size: 18px;
   }
   /* autopark */
-    .card {
-  padding: 30px 35px 90px;
-}
-  .card-text{
+  .card {
+    padding: 30px 35px 90px;
+  }
+  .card-text {
     font-size: 16px;
   }
   .advantage-title,
@@ -702,12 +701,12 @@ body {
   .footer__number-text,
   .footer__social-text,
   .footer__address,
-  .adaptiv-address{
+  .adaptiv-address {
     font-size: 20px;
   }
   .footer-column:last-child {
-        max-width: 850px;
-    }
+    max-width: 850px;
+  }
 }
 @media (max-width: 1300px) {
   /* Общие */
@@ -743,23 +742,18 @@ body {
   .logo {
     max-width: 70px;
   }
-      /* ---services--- */
+  /* ---services--- */
   .services__item {
     max-width: 350px;
   }
   /* footer */
   .footer-column:last-child {
-    max-width: 640px;
+    max-width: 800px;
   }
-  .footer__form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
+  
 }
 @media (max-width: 1200px) {
-       /* ---services--- */
+  /* ---services--- */
   .services__item {
     max-width: 330px;
   }
@@ -777,12 +771,20 @@ body {
   }
   .card {
     max-width: 400px;
-}
-.footer__number-text,
+  }
+  .footer__number-text,
   .footer__address {
     white-space: nowrap;
   }
-
+  .footer__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+      .footer-column:last-child {
+        max-width: 600px;
+    }
 }
 @media (max-width: 1100px) {
   /* ---header--- */
@@ -795,13 +797,13 @@ body {
   .services__item {
     max-width: 380px;
   }
-     /* ---services--- */
+  /* ---services--- */
   .services__item {
     max-width: 300px;
   }
 }
 @media (max-width: 1000px) {
-   /* ---services--- */
+  /* ---services--- */
   .services__item {
     max-width: 330px;
   }
@@ -871,10 +873,10 @@ body {
     display: flex;
   }
   /* ---header-slider--- */
-  .slide-title{
+  .slide-title {
     max-width: 650px;
   }
-  .slide-text{
+  .slide-text {
     font-size: 20px;
   }
   /* advantages */
@@ -891,7 +893,7 @@ body {
   .advantages__item-img {
     align-items: end;
   }
-    /* gallery */
+  /* gallery */
   .gallery__slider {
     width: 100%;
     overflow: hidden;
@@ -940,7 +942,7 @@ body {
     bottom: 280px;
     transform: translate(1%);
   }
-   /* footer */
+  /* footer */
   .footer-columns {
     text-align: center;
     flex-direction: column;
@@ -1004,14 +1006,14 @@ body {
   .button {
     padding: 10px 15px;
   }
-   /* ---header-slider--- */
-   .slide {
-        padding: 180px 0 200px;
-    }
-  .slide-title{
+  /* ---header-slider--- */
+  .slide {
+    padding: 180px 0 200px;
+  }
+  .slide-title {
     font-size: 30px;
   }
-  .slide-text{
+  .slide-text {
     max-width: 400px;
     font-size: 18px;
   }
@@ -1023,14 +1025,14 @@ body {
 @media (max-width: 600px) {
   /* Общее */
   .title,
-  .slide-title{
+  .slide-title {
     font-size: 26px;
   }
   /* ---header--- */
-   .header__nav {
-        max-width: 70%;
-    }
-      /* gallery */
+  .header__nav {
+    max-width: 70%;
+  }
+  /* gallery */
   .gallery__controls .gallery__arrows-prev {
     left: -1%;
     bottom: 140px;
@@ -1041,7 +1043,7 @@ body {
     bottom: 140px;
     transform: translate(1%);
   }
-  .footer-column .social__link svg{
+  .footer-column .social__link svg {
     width: 35px;
   }
 }
@@ -1082,7 +1084,8 @@ body {
       url("../img/header.jpg") 0% 70% / cover no-repeat;
   }
   .slide-title {
-    font-size: 24px;margin-bottom: 0;
+    font-size: 24px;
+    margin-bottom: 0;
   }
   .slide-text {
     font-size: 14px;
@@ -1151,11 +1154,11 @@ body {
 
   /* gallery */
   .gallery__controls .gallery__arrows-prev {
-        bottom: 115px;
-    }
-    .gallery__controls .gallery__arrows-next {
-        bottom: 115px;
-    }
+    bottom: 115px;
+  }
+  .gallery__controls .gallery__arrows-next {
+    bottom: 115px;
+  }
   /* footer */
   .footer-columns {
     gap: 0;
@@ -1213,8 +1216,8 @@ body {
     font-weight: 300;
   }
   .footer__number-text {
-  white-space: wrap;
-}
+    white-space: wrap;
+  }
 
   /* modal-window */
   .modal__inner {
