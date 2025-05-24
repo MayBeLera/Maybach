@@ -49,7 +49,7 @@ new Swiper(".gallery__slider", {
       },
     900: {
               slidesPerView: 10,
-            }
+      }
     });
 
 
