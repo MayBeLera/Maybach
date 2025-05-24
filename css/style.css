@@ -36,12 +36,11 @@ body {
 .advantages,
 .gallery,
 .footer {
-  border-top: 2px solid var(--border);
   padding: 90px 0 65px;
 }
 .title {
   color: var(--text-color);
-  font-size: 64px;
+  font-size: 24px;
   font-weight: 600;
   text-transform: uppercase;
   text-align: center;
@@ -680,6 +679,7 @@ body {
 
   /* ---header-slider--- */
   .slide-title {
+    font-size: 45px;
     max-width: 750px;
     margin-bottom: 0;
   }
