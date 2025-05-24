@@ -18,80 +18,23 @@ function burgerInit(e){
 
 
 // header-slider
-const headerSlides = document.querySelector('.slides');
-const headerSlide = document.querySelectorAll('.slide');
-const prevHeaderBtn = document.getElementById('banner-prev');
-const nextHeaderBtn = document.getElementById('banner-next');
-const paginationContainer = document.querySelector('.pagination');
 
-let currentIndex = 0;
-const totalSlides = headerSlide.length;
-const autoplayIntervalTime = 5000; 
-
-let autoplayInterval;
-
-function updateSliderPosition() {
-  headerSlides.style.transform = `translateX(-${currentIndex * 100}%) `;
-  updatePagination();
-}
-
-function updatePagination() {
-  const dots = document.querySelectorAll('.pagination-dot');
-  dots.forEach(dot => dot.classList.remove('active'));
-  
-  dots[currentIndex].classList.add('active');
-}
-
-function createPaginationDots() {
-  for (let i = 0; i < totalSlides; i++) {
-    const dot = document.createElement('div');
-    dot.classList.add('pagination-dot');
-    dot.addEventListener('click', () => {
-      currentIndex = i; 
-      updateSliderPosition();
-      resetAutoplay(); 
+const swiper = new Swiper(".header__slider", {
+      spaceBetween: 0,
+      slidesPerView: 1,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".banner-next",
+        prevEl: ".banner-prev",
+      },
+      autoplay: {
+      delay: 5000,
+    },
     });
-    paginationContainer.appendChild(dot);
-  }
-}
-
-createPaginationDots();
-updatePagination(); 
-
-nextHeaderBtn.addEventListener('click', () => {
-  if (currentIndex < totalSlides - 1) {
-    currentIndex++;
-  } else {
-    currentIndex = 0; 
-  }
-  updateSliderPosition();
-  resetAutoplay(); 
-});
-
-prevHeaderBtn.addEventListener('click', () => {
-  if (currentIndex > 0) {
-    currentIndex--;
-  } else {
-    currentIndex = totalSlides - 1; 
-  }
-  updateSliderPosition();
-  resetAutoplay(); 
-});
-
-function startAutoplay() {
-  autoplayInterval = setInterval(() => {
-    currentIndex = (currentIndex + 1) % totalSlides; 
-    updateSliderPosition();
-  }, autoplayIntervalTime);
-}
-
-function resetAutoplay() {
-  clearInterval(autoplayInterval);
-  startAutoplay(); 
-}
-
-startAutoplay();
-
 
 
 // modal-window
@@ -119,36 +62,19 @@ modal.addEventListener('click', closeModal)
 }
 
 // gallery-slider
-const gallerySlides = document.querySelector('.gallery__slides');
-const gallerySlide = document.querySelectorAll('.gallery__slide');
-const galleryPrevBtn = document.getElementById('gallery__arrows-prev');
-const galleryNextBtn = document.getElementById('gallery__arrows-next');
-
-let galleryCurrentIndex = 0;
-const galleryTotalSlides = gallerySlide.length;
-
- function updateGallerySliderPosition() {
-   gallerySlides.style.transform = `translateX(-${galleryCurrentIndex * 100}%)`;
-}
-
-galleryNextBtn.addEventListener('click', () => {
-   if (galleryCurrentIndex < galleryTotalSlides - 1) {
-     galleryCurrentIndex++;
-   } else {
-      galleryCurrentIndex = 0;
-   }
-   updateGallerySliderPosition();
- });
-
- galleryPrevBtn.addEventListener('click', () => {
-   if (galleryCurrentIndex > 0) {
-     galleryCurrentIndex--;
-   } else {
-     galleryCurrentIndex = galleryTotalSlides - 1; 
-   }
-   updateGallerySliderPosition();
- });
-
+new Swiper(".gallery__slider", {
+      spaceBetween: 0,
+      slidesPerView: 0,
+      loop: true,
+      
+      navigation: {
+        nextEl: ".gallery__arrows-next",
+        prevEl: ".gallery__arrows-prev ",
+      },
+    900: {
+              slidesPerView: 1,
+            }
+    });
 
    // Маска для телефона
    const inputsTel = document.querySelectorAll('input[type="tel"]');

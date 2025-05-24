@@ -1,5 +1,6 @@
 @import url("reset.css");
 @import url("font.css");
+@import url("swiper-bundle.min.css");
 
 :root {
   --general-bg: #101010;
@@ -176,7 +177,7 @@ body {
   width: 100%;
   margin-top: -105px;
   overflow: hidden;
-  z-index: -1;
+  z-index: 0;
 }
 .slides {
   display: flex;
@@ -230,16 +231,29 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0 15px;
+  gap: 0 65px;
   position: absolute;
   left: 50%;
   bottom: -28%;
   transform: translate(-50%, -28%);
 }
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 15px;
+    left: 0;
+    width: 100%;
+}
+.swiper-pagination-bullet {
+    background: var(--text-color);
+    opacity: 1;
+}
+.swiper-pagination-bullet-active{
+  background: var(--accent);
+}
 .banner-prev,
 .banner-next {
   background: transparent;
 }
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -255,7 +269,6 @@ body {
 .pagination-dot.active {
   background-color: var(--accent);
 }
-
 /* --services-------------------------------------------------------------- */
 .services {
   background: var(--general-bg);
@@ -842,7 +855,7 @@ body {
     inset: 0;
     z-index: 10;
     height: 100%;
-    background: url("../img/adapt-bg.jpg") 0% 0% / 100% no-repeat;
+    background: url("../img/adapt-bg.jpg") 45% 0% / cover no-repeat;
     box-shadow: 4px 22px 40px rgba(30, 35, 66, 0.58);
     font-size: 24px;
     align-items: center;
@@ -920,6 +933,7 @@ body {
     gap: 15px;
     position: relative;
     overflow: visible;
+    z-index: 1;
   }
   .gallery__controls .gallery__arrows-prev,
   .gallery__controls .gallery__arrows-next {
@@ -1078,11 +1092,10 @@ body {
   }
 
   /* header-slider */
-  .slide {
-    padding: 140px 0 201px;
-    background: linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%),
-      url("../img/header.jpg") 0% 70% / cover no-repeat;
-  }
+        .slide {
+        padding: 140px 0 260px;
+        background: linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url(../img/header.jpg) 24% 70% / cover no-repeat;
+    }
   .slide-title {
     font-size: 24px;
     margin-bottom: 0;
