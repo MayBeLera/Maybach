@@ -78,7 +78,7 @@ body {
 }
 .header__nav {
   padding: 5px 16px 6px 25px;
-  background: #161616;
+  background: rgb(22, 22, 22, .8);
   border-radius: 12px;
   color: #fafafa;
   display: flex;
@@ -614,7 +614,7 @@ body {
   }
   /* ---header--- */
   .header__nav {
-    padding: 10px 16px 11px;
+    padding: 5px 16px ;
   }
   .nav__link,
   .nav__number {
@@ -738,7 +738,7 @@ body {
   }
   /* header */
   .header__nav {
-    padding: 10px 16px 11px;
+    padding: 5px 16px ;
   }
   .nav__list {
     gap: 20px;
