@@ -18,7 +18,6 @@ function burgerInit(e){
 
 
 // header-slider
-
 const swiper = new Swiper(".header__slider", {
       spaceBetween: 0,
       slidesPerView: 1,
@@ -35,6 +34,24 @@ const swiper = new Swiper(".header__slider", {
       delay: 5000,
     },
     });
+
+
+
+// gallery-slider
+new Swiper(".gallery__slider", {
+      spaceBetween: 0,
+      slidesPerView: 1,
+      loop: true,
+      
+      navigation: {
+        nextEl: ".gallery__arrows-next",
+        prevEl: ".gallery__arrows-prev ",
+      },
+    900: {
+              slidesPerView: 10,
+            }
+    });
+
 
 
 // modal-window
@@ -61,20 +78,7 @@ modal.addEventListener('click', closeModal)
   }
 }
 
-// gallery-slider
-new Swiper(".gallery__slider", {
-      spaceBetween: 0,
-      slidesPerView: 0,
-      loop: true,
-      
-      navigation: {
-        nextEl: ".gallery__arrows-next",
-        prevEl: ".gallery__arrows-prev ",
-      },
-    900: {
-              slidesPerView: 1,
-            }
-    });
+
 
    // Маска для телефона
    const inputsTel = document.querySelectorAll('input[type="tel"]');
