@@ -609,7 +609,6 @@ body {
 @media (max-width: 1600px) {
   /* общие */
   .title {
-    font-size: 54px;
     margin-bottom: 50px;
   }
   /* ---header--- */
