@@ -437,6 +437,7 @@ body {
   align-items: start;
   gap: 20px 30px;
   letter-spacing: -0.03em;
+  line-height: 1.3;
 }
 .footer-column {
   font-size: 20px;
@@ -518,12 +519,7 @@ body {
 .adaptiv-address {
   display: none;
 }
-.footer__address p {
-  margin-bottom: 10px;
-}
-.footer__address p:last-child {
-  margin-bottom: 0;
-}
+
 .adapt-footer-title {
   display: none;
 }
@@ -1025,7 +1021,7 @@ body {
     gap: 0;
   }
   .footer-column {
-    font-size: 20px;
+    font-size: 18px;
   }
   .footer__column-form {
     border: 1px solid #888888;
@@ -1033,7 +1029,6 @@ body {
   }
   .footer__number,
   .footer__social {
-    font-size: 18px;
     line-height: 1.3;
     text-align: center;
     max-width: 302px;
