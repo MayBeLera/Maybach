@@ -17,6 +17,7 @@ html {
 body {
   font-family: "Montserrat", "Arial", san-serif;
   letter-spacing: -0.06em;
+
 }
 .body--opened-modal,
 .body--opened-menu {
@@ -305,8 +306,9 @@ body {
 .services__item-desc {
   font-size: 16px;
   max-width: 300px;
-  line-height: 130%;
-  font-weight: 300;
+    line-height: 1.6;
+  font-weight: 400;
+  color: hsla(0, 0%, 57%, 1);
   letter-spacing: 0;
 }
 
@@ -388,10 +390,11 @@ body {
 }
 .advantage-text {
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
   max-width: 600px;
-  line-height: 130%;
   letter-spacing: 0;
+  color: hsla(0, 0%, 57%, 1);
+  line-height: 1.6;
 }
 
 /* --gallery--------------------------------------------------------------- */
@@ -1055,12 +1058,9 @@ body {
     margin-bottom: 5px;
   }
   .footer-title {
-    display: none;
-  }
-  .adapt-footer-title {
-    display: block;
     margin-bottom: 15px;
   }
+
   .footer__form input::placeholder {
     font-size: 13px;
   }
