@@ -344,13 +344,18 @@ body {
   text-transform: uppercase;
   font-size: 20px;
   font-weight: 500;
+  line-height: 1.3;
   margin-bottom: 10px;
 }
 .card-text {
   width: 100%;
   font-size: 15px;
-  margin-bottom: 35px;
+  line-height: 1.6;
+  
   font-weight: 300;
+}
+.card-text:last-child{
+  margin-bottom: 35px;
 }
 .card-button {
   font-size: 20px;
@@ -431,12 +436,11 @@ body {
   justify-content: space-around;
   align-items: start;
   gap: 20px 30px;
+  letter-spacing: -0.03em;
 }
 .footer-column {
   font-size: 20px;
   color: var(--text-color);
-}
-.footer-column:last-child {
 }
 .footer__column-form {
   max-width: 650px;
@@ -784,7 +788,7 @@ body {
   .gallery__controls .gallery__arrows-prev,
   .gallery__controls .gallery__arrows-next {
     position: absolute;
-    background: var(--accent);
+    background: transparent;
     border-radius: 100px;
     width: 36px;
     height: 36px;
@@ -918,13 +922,6 @@ body {
   .container {
     padding: 0 15px;
   }
-  /* .services,
-  .autopark,
-  .advantages,
-  .gallery,
-  .footer {
-    padding: 50px 0;
-  } */
   /* header */
   .logo {
     max-width: 50px;
@@ -1036,9 +1033,11 @@ body {
   }
   .footer__number,
   .footer__social {
+    font-size: 18px;
+    line-height: 1.3;
     text-align: center;
     max-width: 302px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
   .footer__number {
     max-width: 302px;
@@ -1052,12 +1051,15 @@ body {
   }
 
   .footer__form-title {
+    font-size: 18px;
+    line-height: 1.3;
     margin-bottom: 8px;
   }
   .footer__form input {
     border: 0.75px solid #888888;
     padding: 16px;
     margin-bottom: 5px;
+    
   }
   .footer-title {
     margin-bottom: 15px;
@@ -1073,9 +1075,10 @@ body {
     font-size: 12px;
   }
   .adaptiv-address p:first-child {
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 1.3;
     font-weight: 500;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
   .adaptiv-address p:last-child {
     font-size: 18px;
