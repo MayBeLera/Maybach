@@ -274,7 +274,7 @@ body {
 }
 /* --services-------------------------------------------------------------- */
 .services {
-  background: var(--add-general-bg);
+  background: var(--general-bg);
 }
 .services__list {
   display: flex;
@@ -360,7 +360,7 @@ body {
 
 /* --advantages------------------------------------------------------------ */
 .advantages {
-  background: var(--general-bg);
+  background: var(--add-general-bg);
 }
 .advantages__list {
   color: var(--text-color);
