@@ -274,7 +274,7 @@ body {
 }
 /* --services-------------------------------------------------------------- */
 .services {
-  background: var(--general-bg);
+  background: var(--add-general-bg);
 }
 .services__list {
   display: flex;
@@ -329,7 +329,7 @@ body {
   align-items: center;
   text-align: center;
   padding: 20px 35px 90px;
-  background: var(--general-bg);
+  background: var(--add-general-bg);
   border: 2px solid #888888;
   border-radius: 12px;
   color: var(--text-color);
@@ -403,7 +403,7 @@ body {
 
 /* --gallery--------------------------------------------------------------- */
 .gallery {
-  background: var(--add-general-bg);
+  background: var(--general-bg);
 }
 .gallery__slider {
   overflow: visible;
@@ -426,7 +426,7 @@ body {
 }
 /* --footer---------------------------------------------------------------- */
 .footer {
-  background: #101010;
+  background: var(--add-general-bg);
 }
 .footer-columns {
   display: flex;
