@@ -30,11 +30,23 @@ const swiper = new Swiper(".header__slider", {
         nextEl: ".banner-next",
         prevEl: ".banner-prev",
       },
+    //   autoplay: {
+    //   delay: 5000,
+    // },
+    });
+// autopark
+new Swiper(".autopark-slider", {
+      spaceBetween: 0,
+      slidesPerView: 1,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
       autoplay: {
       delay: 5000,
     },
     });
-
 
 
 // gallery-slider
